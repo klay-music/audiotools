@@ -53,6 +53,7 @@ setup(
         "flatten-dict",
         "markdown2",
         "randomname",
+        "tensorboard",
         "tqdm",
     ],
     extras_require={
