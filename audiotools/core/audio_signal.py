@@ -599,7 +599,7 @@ class AudioSignal(
         """
         if self.audio_data[0].abs().max() > 1:
             warnings.warn("Audio amplitude > 1 clipped when saving")
-        soundfile.write(str(audio_path), self.audio_data[0].numpy().T, self.sample_rate)
+        soundfile.write(str(audio_path), self.audio_data[0].cpu().numpy().T, self.sample_rate)
 
         self.path_to_file = audio_path
         return self
